@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    Sure Sathish! Here's a clean and simple set of **notes on Inheritance in Python**—perfect for revision or adding to your study material:
+
+---
+
+## 📘 Inheritance in Python
+
+### 🔹 What is Inheritance?
+Inheritance is a feature of **Object-Oriented Programming (OOP)** that allows one class (**child class**) to inherit the properties and methods of another class (**parent class**).
+
+---
+
+### 🔸 Benefits of Inheritance
+- Code Reusability  
+- Increases Code Organization  
+- Promotes Modularity  
+- Supports Hierarchical Classification  
+
+---
+
+### 🔹 Basic Syntax
+
+```python
+class Parent:
+    def method1(self):
+        print("Parent method")
+
+class Child(Parent):
+    def method2(self):
+        print("Child method")
+
+obj = Child()
+obj.method1()  # Inherited from Parent
+obj.method2()
+```
+
+---
+
+### 🔸 Types of Inheritance
+
+1. **Single Inheritance**
+   - One child class inherits from one parent class.
+   ```python
+   class A:
+       pass
+
+   class B(A):
+       pass
+   ```
+
+2. **Multiple Inheritance**
+   - A child class inherits from multiple parent classes.
+   ```python
+   class A:
+       pass
+
+   class B:
+       pass
+
+   class C(A, B):
+       pass
+   ```
+
+3. **Multilevel Inheritance**
+   - A class is derived from a class which is also derived from another class.
+   ```python
+   class A:
+       pass
+
+   class B(A):
+       pass
+
+   class C(B):
+       pass
+   ```
+
+4. **Hierarchical Inheritance**
+   - Multiple child classes inherit from a single parent class.
+   ```python
+   class A:
+       pass
+
+   class B(A):
+       pass
+
+   class C(A):
+       pass
+   ```
+
+5. **Hybrid Inheritance**
+   - Combination of more than one type of inheritance.
+
+---
+
+### 🔹 `super()` Function
+Used to call the constructor or methods of the **parent class**.
+
+```python
+class Parent:
+    def __init__(self):
+        print("Parent constructor")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        print("Child constructor")
+```
+
+---
+
+### 🔸 Method Overriding
+Child class can override a method of the parent class with its own version.
+
+```python
+class Parent:
+    def show(self):
+        print("Parent")
+
+class Child(Parent):
+    def show(self):
+        print("Child")
+
+obj = Child()
+obj.show()  # Output: Child
+```
+
+---
+
+### 🔹 `isinstance()` and `issubclass()`
+- `isinstance(obj, ClassName)` → Checks if object belongs to a class.
+- `issubclass(SubClass, ParentClass)` → Checks if a class is a subclass of another.
+
+---
+
+Do you want me to save this as a downloadable PDF or add examples with real-life scenarios like School, Employee, or Animal class?
+</body>
+</html>
